@@ -13,5 +13,5 @@ import { Component } from '@angular2/core';
 	template: `<i>Hello World!</i>`
 })
 export class MainApp {
-	
-};
+	name = 'Lore';
+}
