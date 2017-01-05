@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
 
-	<title>Angular 2 Demo</title>
+	<head>
+		<base href="." />
+		
+		<title>Angular 2 playground</title>
 
-	<!-- Load depedencies  -->
-	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-	<script src="https://npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2-polyfills.js"></script>
-	<script src="https://npmcdn.com/typescript@1.7.5/lib/typescript.js"></script>
-	<script src="https://npmcdn.com/systemjs@0.19.8/dist/system.src.js"></script>
-	<script src="https://npmcdn.com/rxjs@5.0.0-beta.0/bundles/Rx.js"></script>
-	<script src="https://npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2.dev.js"></script>
-	<script>
- 
-	/*
-	Config the transpiler to be typescript. 
-	*/
-	System.config({transpiler: 'typescript'});
+		<script src="https://unpkg.com/zone.js/dist/zone.js"></script>
+		<script src="https://unpkg.com/zone.js/dist/long-stack-trace-zone.js"></script>
+		<script src="https://unpkg.com/reflect-metadata@0.1.3/Reflect.js"></script>
+		<script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+		<script>
+			/*
+				Inspired by bootstrapping with Angular 2 by Todd Motto
+				Source: http://ngmigrate.telerik.com/bootstrapping-in-angular-2
+			*/
+			System.config({
+				//use typescript for compilation
+				transpiler: 'typescript',
+				//typescript compiler options
+				typescriptOptions: {
+					emitDecoratorMetadata: true
+				},
+				paths: {
+					'npm:': 'https://unpkg.com/'
+				},
+				//map tells the System loader where to look for things
+				map: {
+					
+					'app': './src', /* app folder */
+					
+					'@angular/core': 'npm:@angular/core/bundles/core.umd.js',
+					'@angular/common': 'npm:@angular/common/bundles/common.umd.js',
+					'@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
+					'@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
+					'@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+					'@angular/http': 'npm:@angular/http/bundles/http.umd.js',
+					'@angular/router': 'npm:@angular/router/bundles/router.umd.js',
+					'@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+					
+					'@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
+					'@angular/common/testing': 'npm:@angular/common/bundles/common-testing.umd.js',
+					'@angular/compiler/testing': 'npm:@angular/compiler/bundles/compiler-testing.umd.js',
+					'@angular/http/testing': 'npm:@angular/http/bundles/http-testing.umd.js',
+					'@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
+					
+					'rxjs': 'npm:rxjs',
+					'typescript': 'npm:typescript@2.0.2/lib/typescript.js'
+				},
+				//packages defines our app package
+				packages: {
+					app: {
+						main: './main.ts',
+						defaultExtension: 'ts'
+					},
+					rxjs: {
+						defaultExtension: 'js'
+					}
+				}
+			});
+		</script>
+		<script>
+			System.import('app').catch(console.error.bind(console));  // as in ./src/main.ts
+		</script>
+	</head>
 
-	//load our hello-world component
-	//System.import('./hello-world.ts'); 
-	System.import('./main.ts');
-	</script>
+	<body>
+		<my-app>loading...</my-app>
+	</body>
 
-</head>
-<body>
-
-	<!-- User defined component  -->
-	<!--hello-world></hello-world-->
-
-	<!-- Another user defined component -->
-	<h1>
-		<main-app></main-app>
-	</h1>
-	
-</body>
 </html>
