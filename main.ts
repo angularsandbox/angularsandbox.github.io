@@ -3,7 +3,7 @@
 	packadges area, core and platform/browser
 */
 import { bootstrap } from 'angular2/platform/browser'; // not to be confused w bootstrap 2.0
-import { Component } from '@angular2/core';
+import { Component } from 'angular2/core';
 
 /*
 	The main component decorator with it matadata inside
