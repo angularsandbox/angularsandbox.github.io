@@ -16,13 +16,13 @@ import {Component} from 'angular2/core';
 	 binding that our component has.
 */
 @Component({
-  selector: 'hello-world',
-  template: `<h1>Hello {{ name }}!</h1>`
+	selector: 'hello-world',
+	template: `<h1>Hello {{ name }}!</h1>`
 })
 class HelloWorldComponent {
-  constructor() {
-    this.name = 'Angular 2';
-  }
+	constructor() {
+		this.name = 'Angular 2';
+	}
 }
 
 //This will instantiates our hello-world
