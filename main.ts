@@ -15,3 +15,5 @@ import { Component } from 'angular2/core';
 export class MainApp {
 	name = 'Lore';
 }
+
+bootstrap(MainApp);
