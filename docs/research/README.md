@@ -15,3 +15,16 @@ This is a research on how to build basic Angular JS 2 applications.
 * Latest javascript standards like ES2015 / ES2016 aka ES6
 * Mobile support
 
+
+## Components 
+
+> Basic building block of the UI. An Angular application is a tree of Angular components.
+
+Source: https://youtu.be/-zW1zHqsdyc?t=373
+
+### Example of components
+
+This is the most basic example
+
+![Example](https://raw.githubusercontent.com/angularsandbox/angularsandbox.github.io/master/docs/research/img/example-component.jpg "Visual example from the guide")
+
