@@ -20,7 +20,9 @@ import {Component} from 'angular2/core';
 	template: `<h1>Hello {{ name }}!</h1>`
 })
 class HelloWorldComponent {
-	name: 'Angular.JS 2'
+	constructor() {
+		this.name = 'Angular II';
+	}
 }
 
 //This will instantiates our hello-world
