@@ -10,10 +10,13 @@ import { Component } from 'angular2/core';
 */
 @Component({
 	selector: 'main-app',
-	template: `<i>Hello World!</i>`
+	template: `<i>Hello World</i>`
 })
 export class MainApp {
 	name = 'Lore';
 }
 
+/*
+	Boot-strap the aplication
+*/
 bootstrap(MainApp);
