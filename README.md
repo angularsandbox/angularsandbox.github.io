@@ -12,4 +12,4 @@ python -m SimpleHTTPServer 8080
 
 ## Documentation
 
-More details can be found in the docs folder and all it's subfolders [docs](tree/master/docs/)
+More details can be found in the docs folder and all it's subfolders [docs/research/README.md](docs/research/README.md)
