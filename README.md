@@ -9,3 +9,7 @@ The page is located at : https://angularsandbox.github.io/
 ```python
 python -m SimpleHTTPServer 8080
 ```
+
+## Documentation
+
+More details can be found in the docs folder and all it's subfolders [docs](tree/master/docs/)
